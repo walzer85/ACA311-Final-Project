@@ -1,0 +1,19 @@
+{
+  "name": "aca311-final-project",
+  "version": "1.0.0",
+  "description": "Eric's ACA 311 final project",
+  "main": "index.js",
+  "dependencies": {
+    "create-react-app": "^1.5.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tuner",
+    "gig"
+  ],
+  "author": "Eric Walz",
+  "license": "ISC"
+}
