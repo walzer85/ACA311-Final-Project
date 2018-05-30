@@ -16,6 +16,10 @@ class NewUser extends Component {
     }
 
     handleChange(event) {
+        const target = event.target;
+        const value = target.value;
+        const name = target.name;
+        
         this.setState({value: event.target.value});
       }
 
@@ -33,15 +37,42 @@ class NewUser extends Component {
     render() {
       return (
         <div className="square" onClick={() => this.props.onClick()}>
-            <form onSubmit>
+            <form>
                 <label>
-                Tell Us About Yourself:
-                <input type="text" name="Name" value={this.state.name} onChange={this.handleChange} />
-                <input type="text" name="Instrument" value={this.state.instrument} onChange={this.handleChange} />
-                <input type="text" name="Years Played" value={this.state.yearsPlayed} onChange={this.handleChange} />
-                <input type="text" name="Genres" value={this.state.genres} onChange={this.handleChange} />
+                Name:
+                <input
+                    name="name"
+                    type="text"
+                    checked={this.state.name}
+                    onChange={this.handleInputChange} />
                 </label>
-                <input type="submit" value="Submit" />
+                <br />
+                <label>
+                Instrument:
+                <input
+                    name="instrument"
+                    type="text"
+                    value={this.state.instrument}
+                    onChange={this.handleInputChange} />
+                </label>
+                <br />
+                <label>
+                Years Played:
+                <input
+                    name="yearsPlayed"
+                    type="number"
+                    value={this.state.yearsPlayed}
+                    onChange={this.handleInputChange} />
+                </label>
+                <br />
+                <label>
+                Genres Played:
+                <input
+                    name="genres"
+                    type="text"
+                    value={this.state.genres}
+                    onChange={this.handleInputChange} />
+                </label>
             </form>
         </div>
       );
